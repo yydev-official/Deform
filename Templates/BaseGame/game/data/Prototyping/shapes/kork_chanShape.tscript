@@ -1,0 +1,8 @@
+
+singleton TSShapeConstructor(kork_chanShapefbx)
+{
+   baseShapeAsset = ":kork_chanShape_shape";
+   singleDetailSize = "0";
+   neverImportMat = "DefaultMaterial	ColorEffect*";
+   animFPS = "2";
+};

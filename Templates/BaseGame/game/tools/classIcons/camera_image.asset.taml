@@ -1,0 +1,8 @@
+<ImageAsset
+    canSave="true"
+    canSaveDynamicFields="true"
+    AssetName="Camera_image"
+    imageFile="@assetFile=Camera.png"
+    UseMips="true"
+    isHDRImage="false"
+    imageType="Albedo" />

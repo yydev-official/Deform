@@ -1,0 +1,336 @@
+//-----------------------------------------------------------------------------
+// Copyright (c) 2013 GarageGames, LLC
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to
+// deal in the Software without restriction, including without limitation the
+// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+// sell copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+// IN THE SOFTWARE.
+//-----------------------------------------------------------------------------
+#pragma once
+#ifndef TERRAINMATERIALASSET_H
+#define TERRAINMATERIALASSET_H
+
+#ifndef _ASSET_BASE_H_
+#include "assets/assetBase.h"
+#endif
+
+#ifndef _ASSET_DEFINITION_H_
+#include "assets/assetDefinition.h"
+#endif
+
+#ifndef _STRINGUNIT_H_
+#include "string/stringUnit.h"
+#endif
+
+#ifndef _ASSET_FIELD_TYPES_H_
+#include "assets/assetFieldTypes.h"
+#endif
+
+#ifndef _GFXDEVICE_H_
+#include "gfx/gfxDevice.h"
+#endif
+
+#ifndef _GUI_INSPECTOR_TYPES_H_
+#include "gui/editor/guiInspectorTypes.h"
+#endif
+
+#ifndef _TERRMATERIAL_H_
+#include "terrain/terrMaterial.h"
+#endif
+
+#ifndef _MATERIALDEFINITION_H_
+#include "materials/materialDefinition.h"
+#endif
+
+//-----------------------------------------------------------------------------
+class TerrainMaterialAsset : public AssetBase
+{
+   typedef AssetBase Parent;
+
+   StringTableEntry        mScriptFile;
+   StringTableEntry        mScriptPath;
+   StringTableEntry        mMatDefinitionName;
+
+   SimObjectPtr<TerrainMaterial>  mMaterialDefinition;
+
+   SimObjectPtr<Material>  mFXMaterialDefinition;
+
+public:
+   static StringTableEntry smNoTerrainMaterialAssetFallback;
+   
+   enum TerrainMaterialAssetErrCode
+   {
+      ScriptLoaded = AssetErrCode::Extended,
+      DefinitionAlreadyExists,
+      EmbeddedDefinition,
+      Extended
+   };
+
+public:
+   TerrainMaterialAsset();
+   virtual ~TerrainMaterialAsset();
+   /// Set up some global script interface stuff.
+   static void consoleInit();
+
+   /// Engine.
+   static void initPersistFields();
+   void copyTo(SimObject* object) override;
+
+   U32 load() override;
+
+   StringTableEntry getMaterialDefinitionName() { return mMatDefinitionName; }
+   SimObjectPtr<TerrainMaterial> getMaterialDefinition() { return mMaterialDefinition; }
+
+   SimObjectPtr<Material> getFXMaterialDefinition() { return mFXMaterialDefinition; }
+
+   void                    setScriptFile(const char* pScriptFile);
+   inline StringTableEntry getScriptFile(void) const { return mScriptFile; };
+
+   inline StringTableEntry getScriptPath(void) const { return mScriptPath; };
+
+   /// <summary>
+   /// Looks for any assets that uses the provided Material Definition name.
+   /// If none are found, attempts to auto-import the material definition if the
+   /// material definition exists.
+   /// </summary>
+   /// <param name="matName">Material Definition name to look for</param>
+   /// <returns>AssetId of matching asset.</returns>
+   static StringTableEntry getAssetIdByMaterialName(StringTableEntry matName);
+   static U32 getAssetById(StringTableEntry assetId, AssetPtr<TerrainMaterialAsset>* materialAsset);
+   static SimObjectPtr<TerrainMaterial> findMaterialDefinitionByAssetId(StringTableEntry assetId);
+   static U32 getAssetByMaterialName(StringTableEntry matName, AssetPtr<TerrainMaterialAsset>* matAsset);
+
+   /// Declare Console Object.
+   DECLARE_CONOBJECT(TerrainMaterialAsset);
+
+protected:
+   void initializeAsset() override;
+   void onAssetRefresh(void) override;
+
+   static bool setScriptFile(void *obj, const char *index, const char *data) 
+   { 
+	   static_cast<TerrainMaterialAsset*>(obj)->setScriptFile(data); 
+	   return false; 
+   }
+   static const char* getScriptFile(void* obj, const char* data) { return static_cast<TerrainMaterialAsset*>(obj)->getScriptFile(); }
+};
+
+DECLARE_STRUCT(AssetPtr<TerrainMaterialAsset>)
+DefineConsoleType(TypeTerrainMaterialAssetPtr, AssetPtr<TerrainMaterialAsset>)
+
+#define DECLARE_TERRAINMATERIALASSET(className, name)                                                                                                               \
+private:                                                                                                                                                                      \
+   AssetPtr<TerrainMaterialAsset> m##name##Asset;                                                                                                                                  \
+   StringTableEntry     m##name##File = {StringTable->EmptyString() };                                                                                                   \
+public:                                                                                                                                                                       \
+   void _set##name(StringTableEntry _in){                                                                                                                   \
+      if (m##name##Asset.getAssetId() == _in)                                                                                                                          \
+         return;                                                                                                                                                              \
+      if(_in == NULL || !String::compare(_in,StringTable->EmptyString()))                                                                                                       \
+      {                                                                                                                                                                       \
+         m##name##Asset = NULL;                                                                                                                                        \
+         m##name##File = "";                                                                                                                                           \
+         return;                                                                                                                                                              \
+      }                                                                                                                                                                       \
+      if (!AssetDatabase.isDeclaredAsset(_in))                                                                                                                                \
+      {                                                                                                                                                                       \
+         StringTableEntry terMatAssetId = StringTable->EmptyString();                                                                                                          \
+         AssetQuery query;                                                                                                                                                    \
+         S32 foundAssetcount = AssetDatabase.findAssetLooseFile(&query, _in);                                                                                                 \
+         if (foundAssetcount != 0)                                                                                                                                            \
+         {                                                                                                                                                                    \
+            terMatAssetId = query.mAssetList[0];                                                                                                                               \
+         }                                                                                                                                                                    \
+         m##name##Asset = terMatAssetId;                                                                                                                                \
+         m##name##File = _in;                                                                                                                                          \
+      }                                                                                                                                                                       \
+      else                                                                                                                                                                    \
+      {                                                                                                                                                                       \
+         m##name##Asset = _in;                                                                                                                                         \
+         m##name##File = get##name##File();                                                                                                                       \
+      }                                                                                                                                                                       \
+   };                                                                                                                                                                         \
+                                                                                                                                                                              \
+   inline StringTableEntry _get##name##AssetId() const { return m##name##Asset.getAssetId(); }                                                         \
+   TerrainMaterial* get##name() { if (m##name##Asset.notNull()) return m##name##Asset->getMaterialDefinition(); else return NULL; }                                  \
+   AssetPtr<TerrainMaterialAsset> get##name##Asset() { return m##name##Asset; }                                                                                  \
+   static bool _set##name##Data(void* obj, const char* index, const char* data) { static_cast<className*>(obj)->_set##name(_getStringTable()->insert(data)); return false;}\
+   StringTableEntry get##name##File() { return m##name##Asset.notNull() ? m##name##Asset->getScriptFile() : ""; }
+
+#define DECLARE_TERRAINMATERIALASSET_NET(className, name, mask)                                                                                                               \
+private:                                                                                                                                                                      \
+   AssetPtr<TerrainMaterialAsset> m##name##Asset;                                                                                                                                  \
+   StringTableEntry     m##name##File = {StringTable->EmptyString() };                                                                                                   \
+public:                                                                                                                                                                       \
+   void _set##name(StringTableEntry _in){                                                                                                                   \
+      if (m##name##Asset.getAssetId() == _in)                                                                                                                          \
+         return;                                                                                                                                                              \
+      if(_in == NULL || !String::compare(_in,StringTable->EmptyString()))                                                                                                       \
+      {                                                                                                                                                                       \
+         m##name##Asset = NULL;                                                                                                                                        \
+         m##name##File = "";                                                                                                                                           \
+         return;                                                                                                                                                              \
+      }                                                                                                                                                                       \
+      if (!AssetDatabase.isDeclaredAsset(_in))                                                                                                                                \
+      {                                                                                                                                                                       \
+         StringTableEntry terMatAssetId = StringTable->EmptyString();                                                                                                          \
+         AssetQuery query;                                                                                                                                                    \
+         S32 foundAssetcount = AssetDatabase.findAssetLooseFile(&query, _in);                                                                                                 \
+         if (foundAssetcount != 0)                                                                                                                                            \
+         {                                                                                                                                                                    \
+            terMatAssetId = query.mAssetList[0];                                                                                                                               \
+         }                                                                                                                                                                    \
+         m##name##Asset = terMatAssetId;                                                                                                                                \
+         m##name##File = _in;                                                                                                                                          \
+      }                                                                                                                                                                       \
+      else                                                                                                                                                                    \
+      {                                                                                                                                                                       \
+         m##name##Asset = _in;                                                                                                                                         \
+         m##name##File = get##name##File();                                                                                                                       \
+      }                                                                                                                                                                       \
+   };                                                                                                                                                                         \
+                                                                                                                                                                              \
+   inline StringTableEntry _get##name##AssetId() const { return m##name##Asset.getAssetId(); }                                                         \
+   TerrainMaterial* get##name() { if (m##name##Asset.notNull()) return m##name##Asset->getMaterialDefinition(); else return NULL; }                                  \
+   AssetPtr<TerrainMaterialAsset> get##name##Asset() { return m##name##Asset; }                                                                                  \
+   static bool _set##name##Data(void* obj, const char* index, const char* data)\
+   {\
+       static_cast<className*>(obj)->_set##name(_getStringTable()->insert(data));\
+       static_cast<className*>(obj)->setMaskBits(mask); \
+       return false;\
+   }\
+   StringTableEntry get##name##File() { return m##name##Asset.notNull() ? m##name##Asset->getScriptFile() : ""; }
+
+#define INITPERSISTFIELD_TERRAINMATERIALASSET(name, consoleClass, docs)                                                                                       \
+   addProtectedField(assetText(name, Asset), TypeTerrainMaterialAssetPtr, Offset(m##name##Asset, consoleClass), _set##name##Data, &defaultProtectedGetFn, assetDoc(name, asset docs.));\
+   addProtectedField(assetText(name, File), TypeFilename, Offset(m##name##File, consoleClass), _set##name##Data, &defaultProtectedGetFn, assetDoc(name, asset docs.), AbstractClassRep::FIELD_HideInInspectors);
+
+#define DECLARE_TERRAINMATERIALASSET_ARRAY(className, name, max)                                                                                                               \
+private:                                                                                                                                                                      \
+   AssetPtr<TerrainMaterialAsset> m##name##Asset[max];                                                                                                                                  \
+   StringTableEntry     m##name##File[max] = {StringTable->EmptyString() };                                                                                                   \
+public:                                                                                                                                                                       \
+   void _set##name(StringTableEntry _in, const U32& index){                                                                                                                   \
+      if (m##name##Asset[index].getAssetId() == _in)                                                                                                                          \
+         return;                                                                                                                                                              \
+      if(_in == NULL || !String::compare(_in,StringTable->EmptyString()))                                                                                                       \
+      {                                                                                                                                                                       \
+         m##name##Asset[index] = NULL;                                                                                                                                        \
+         m##name##File[index] = "";                                                                                                                                           \
+         return;                                                                                                                                                              \
+      }                                                                                                                                                                       \
+      if (!AssetDatabase.isDeclaredAsset(_in))                                                                                                                                \
+      {                                                                                                                                                                       \
+         StringTableEntry terMatAssetId = StringTable->EmptyString();                                                                                                          \
+         AssetQuery query;                                                                                                                                                    \
+         S32 foundAssetcount = AssetDatabase.findAssetLooseFile(&query, _in);                                                                                                 \
+         if (foundAssetcount != 0)                                                                                                                                            \
+         {                                                                                                                                                                    \
+            terMatAssetId = query.mAssetList[0];                                                                                                                               \
+         }                                                                                                                                                                    \
+         m##name##Asset[index] = terMatAssetId;                                                                                                                                \
+         m##name##File[index] = _in;                                                                                                                                          \
+      }                                                                                                                                                                       \
+      else                                                                                                                                                                    \
+      {                                                                                                                                                                       \
+         m##name##Asset[index] = _in;                                                                                                                                         \
+         m##name##File[index] = get##name##File(index);                                                                                                                       \
+      }                                                                                                                                                                       \
+   };                                                                                                                                                                         \
+                                                                                                                                                                              \
+   inline StringTableEntry _get##name##AssetId(const U32& index) const { return m##name##Asset[index].getAssetId(); }                                                         \
+   TerrainMaterial* get##name(const U32& index) { if (m##name##Asset[index].notNull()) return m##name##Asset[index]->getMaterialDefinition(); else return NULL; }                                  \
+   AssetPtr<TerrainMaterialAsset> get##name##Asset(const U32& index) { return m##name##Asset[index]; }                                                                                  \
+   static bool _set##name##Data(void* obj, const char* index, const char* data) { static_cast<className*>(obj)->_set##name(_getStringTable()->insert(data), dAtoi(index)); return false;}\
+   StringTableEntry get##name##File(const U32& idx) { return m##name##Asset[idx].notNull() ? m##name##Asset[idx]->getScriptFile() : ""; }
+
+#define DECLARE_TERRAINMATERIALASSET_NET_ARRAY(className, name, max, mask)                                                                                                               \
+private:                                                                                                                                                                      \
+   AssetPtr<TerrainMaterialAsset> m##name##Asset[max];                                                                                                                                  \
+   StringTableEntry     m##name##File[max] = {StringTable->EmptyString() };                                                                                                   \
+public:                                                                                                                                                                       \
+   void _set##name(StringTableEntry _in, const U32& index){                                                                                                                   \
+      if (m##name##Asset[index].getAssetId() == _in)                                                                                                                          \
+         return;                                                                                                                                                              \
+      if(_in == NULL || !String::compare(_in,StringTable->EmptyString()))                                                                                                       \
+      {                                                                                                                                                                       \
+         m##name##Asset[index] = NULL;                                                                                                                                        \
+         m##name##File[index] = "";                                                                                                                                           \
+         return;                                                                                                                                                              \
+      }                                                                                                                                                                       \
+      if (!AssetDatabase.isDeclaredAsset(_in))                                                                                                                                \
+      {                                                                                                                                                                       \
+         StringTableEntry terMatAssetId = StringTable->EmptyString();                                                                                                          \
+         AssetQuery query;                                                                                                                                                    \
+         S32 foundAssetcount = AssetDatabase.findAssetLooseFile(&query, _in);                                                                                                 \
+         if (foundAssetcount != 0)                                                                                                                                            \
+         {                                                                                                                                                                    \
+            terMatAssetId = query.mAssetList[0];                                                                                                                               \
+         }                                                                                                                                                                    \
+         m##name##Asset[index] = terMatAssetId;                                                                                                                                \
+         m##name##File[index] = _in;                                                                                                                                          \
+      }                                                                                                                                                                       \
+      else                                                                                                                                                                    \
+      {                                                                                                                                                                       \
+         m##name##Asset[index] = _in;                                                                                                                                         \
+         m##name##File[index] = get##name##File(index);                                                                                                                       \
+      }                                                                                                                                                                       \
+   };                                                                                                                                                                         \
+                                                                                                                                                                              \
+   inline StringTableEntry _get##name##AssetId(const U32& index) const { return m##name##Asset[index].getAssetId(); }                                                         \
+   TerrainMaterial* get##name(const U32& index) { if (m##name##Asset[index].notNull()) return m##name##Asset[index]->getMaterialDefinition(); else return NULL; }                                  \
+   AssetPtr<TerrainMaterialAsset> get##name##Asset(const U32& index) { return m##name##Asset[index]; }                                                                                  \
+   static bool _set##name##Data(void* obj, const char* index, const char* data)\
+   {\
+       static_cast<className*>(obj)->_set##name(_getStringTable()->insert(data), dAtoi(index));\
+       static_cast<className*>(obj)->setMaskBits(mask); \
+       return false;\
+   }\
+   StringTableEntry get##name##File(const U32& idx) { return m##name##Asset[idx].notNull() ? m##name##Asset[idx]->getScriptFile() : ""; }
+
+#define INITPERSISTFIELD_TERRAINMATERIALASSET_ARRAY(name, arraySize, consoleClass, docs)                                                                                       \
+   addProtectedField(assetText(name, Asset), TypeTerrainMaterialAssetPtr, Offset(m##name##Asset, consoleClass), _set##name##Data, &defaultProtectedGetFn, arraySize, assetDoc(name, asset docs.));\
+   addProtectedField(assetText(name, File), TypeFilename, Offset(m##name##File, consoleClass), _set##name##Data, &defaultProtectedGetFn, arraySize, assetDoc(name, asset docs.), AbstractClassRep::FIELD_HideInInspectors);
+
+DefineConsoleType(TypeTerrainMaterialAssetId, String)
+#ifdef TORQUE_TOOLS
+//-----------------------------------------------------------------------------
+// TypeAssetId GuiInspectorField Class
+//-----------------------------------------------------------------------------
+class GuiInspectorTypeTerrainMaterialAssetPtr : public GuiInspectorTypeFileName
+{
+   typedef GuiInspectorTypeFileName Parent;
+public:
+
+   GuiBitmapButtonCtrl* mEditButton;
+
+   DECLARE_CONOBJECT(GuiInspectorTypeTerrainMaterialAssetPtr);
+   static void consoleInit();
+
+   GuiControl* constructEditControl() override;
+   bool updateRects() override;
+};
+class GuiInspectorTypeTerrainMaterialAssetId : public GuiInspectorTypeTerrainMaterialAssetPtr
+{
+   typedef GuiInspectorTypeTerrainMaterialAssetPtr Parent;
+public:
+
+   DECLARE_CONOBJECT(GuiInspectorTypeTerrainMaterialAssetId);
+   static void consoleInit();
+};
+#endif
+#endif // _ASSET_BASE_H_
+
