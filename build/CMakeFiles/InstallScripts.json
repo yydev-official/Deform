@@ -1,7 +1,9 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/Youssef/Documents/VSCode/Deform/build/cmake_install.cmake"
+		"E:/Deform/build/cmake_install.cmake",
+		"E:/Deform/build/src/external/GLFW/cmake_install.cmake",
+		"E:/Deform/build/src/external/GLFW/src/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
