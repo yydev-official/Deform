@@ -5,12 +5,9 @@
 #include "Window.h"
 
 // CONSTRUCTOR AND OVERLOADS
-Window::Window() : m_Window(nullptr), m_Width(0), m_Height(0), m_Created(false)
-{
-}
+Window::Window() : m_Window(nullptr), m_Width(0), m_Height(0), m_Created(false) {}
 
 // FACTORY METHODS
-
 bool Window::Create(int width, int height)
 {
     if (m_Created)
@@ -19,7 +16,7 @@ bool Window::Create(int width, int height)
     m_Width = width;
     m_Height = height;
 
-    m_Window = glfwCreateWindow(width, height, "Trail Engine", nullptr, nullptr);
+    m_Window = glfwCreateWindow(width, height, "Deform Engine - EDITOR (DirectX 11)", nullptr, nullptr);
     m_Created = (m_Window != nullptr);
 
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API); //we will apply api manually

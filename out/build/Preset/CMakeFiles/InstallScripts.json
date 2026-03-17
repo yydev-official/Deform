@@ -1,9 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/Users/Youssef/Documents/Deform-main/out/build/Preset/cmake_install.cmake",
-		"C:/Users/Youssef/Documents/Deform-main/out/build/Preset/src/external/GLFW/cmake_install.cmake",
-		"C:/Users/Youssef/Documents/Deform-main/out/build/Preset/src/external/GLFW/src/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

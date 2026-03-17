@@ -3,7 +3,7 @@
 class GLRender
 {
 public:
-    bool InitGL();
+    bool Initgl(GLFWwindow* hwnd);
 };
 
 // delete arit folder.

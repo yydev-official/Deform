@@ -1,7 +1,0 @@
-C:/Users/Youssef/Documents/Deform-main/out/build/Preset/CMakeFiles/glad.dir
-C:/Users/Youssef/Documents/Deform-main/out/build/Preset/CMakeFiles/TrailEngine.dir
-C:/Users/Youssef/Documents/Deform-main/out/build/Preset/CMakeFiles/ALL_BUILD.dir
-C:/Users/Youssef/Documents/Deform-main/out/build/Preset/CMakeFiles/ZERO_CHECK.dir
-C:/Users/Youssef/Documents/Deform-main/out/build/Preset/src/external/GLFW/CMakeFiles/ALL_BUILD.dir
-C:/Users/Youssef/Documents/Deform-main/out/build/Preset/src/external/GLFW/src/CMakeFiles/glfw.dir
-C:/Users/Youssef/Documents/Deform-main/out/build/Preset/src/external/GLFW/src/CMakeFiles/update_mappings.dir

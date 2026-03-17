@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\maths\vector\Vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\object\Object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\render\d3d11\DXRender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\scene\scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\editor\src\EditorUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\external\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\external\imgui\imgui_demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\external\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\external\imgui\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\external\imgui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\external\imgui\misc\cpp\imgui_stdlib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics\Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\external\imgui\backends\imgui_impl_dx11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\external\imgui\backends\imgui_impl_glfw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Editor\src\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\init.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\maths\vector\Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\object\Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\object\ObjectFlags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\object\ObjectID.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\render\d3d11\DXRender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\scene\scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editor\Editor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\glfw\include\glfw\glfw3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\glfw\include\glfw\glfw3native.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\imgui\imconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\imgui\imgui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\imgui\imgui_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\imgui\imstb_rectpack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\imgui\imstb_textedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\imgui\imstb_truetype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\imgui\misc\cpp\imgui_stdlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\imgui\misc\single_file\imgui_single_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\graphics\Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\imgui\backends\imgui_impl_dx11.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\imgui\backends\imgui_impl_glfw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\external\glfw\docs\html\build_8md.html" />
+    <None Include="src\external\glfw\docs\html\build_guide.html" />
+    <None Include="src\external\glfw\docs\html\compat_8md.html" />
+    <None Include="src\external\glfw\docs\html\compat_guide.html" />
+    <None Include="src\external\glfw\docs\html\compile_8md.html" />
+    <None Include="src\external\glfw\docs\html\compile_guide.html" />
+    <None Include="src\external\glfw\docs\html\context_8md.html" />
+    <None Include="src\external\glfw\docs\html\context_guide.html" />
+    <None Include="src\external\glfw\docs\html\deprecated.html" />
+    <None Include="src\external\glfw\docs\html\dir_13577e2d8b9423099662de029791bd7d.html" />
+    <None Include="src\external\glfw\docs\html\dir_7f92719a7fe62e5b064f87d7a3c220b1.html" />
+    <None Include="src\external\glfw\docs\html\dir_a788ef6c2b1e5b367804e0b6ccfd6f11.html" />
+    <None Include="src\external\glfw\docs\html\dir_b11153cd0f4fd04a7564cc166f482635.html" />
+    <None Include="src\external\glfw\docs\html\files.html" />
+    <None Include="src\external\glfw\docs\html\glfw3native_8h.html" />
+    <None Include="src\external\glfw\docs\html\glfw3native_8h_source.html" />
+    <None Include="src\external\glfw\docs\html\glfw3_8h.html" />
+    <None Include="src\external\glfw\docs\html\glfw3_8h_source.html" />
+    <None Include="src\external\glfw\docs\html\group__buttons.html" />
+    <None Include="src\external\glfw\docs\html\group__context.html" />
+    <None Include="src\external\glfw\docs\html\group__errors.html" />
+    <None Include="src\external\glfw\docs\html\group__gamepad__axes.html" />
+    <None Include="src\external\glfw\docs\html\group__gamepad__buttons.html" />
+    <None Include="src\external\glfw\docs\html\group__hat__state.html" />
+    <None Include="src\external\glfw\docs\html\group__init.html" />
+    <None Include="src\external\glfw\docs\html\group__input.html" />
+    <None Include="src\external\glfw\docs\html\group__joysticks.html" />
+    <None Include="src\external\glfw\docs\html\group__keys.html" />
+    <None Include="src\external\glfw\docs\html\group__mods.html" />
+    <None Include="src\external\glfw\docs\html\group__monitor.html" />
+    <None Include="src\external\glfw\docs\html\group__native.html" />
+    <None Include="src\external\glfw\docs\html\group__shapes.html" />
+    <None Include="src\external\glfw\docs\html\group__vulkan.html" />
+    <None Include="src\external\glfw\docs\html\group__window.html" />
+    <None Include="src\external\glfw\docs\html\index.html" />
+    <None Include="src\external\glfw\docs\html\input_8md.html" />
+    <None Include="src\external\glfw\docs\html\input_guide.html" />
+    <None Include="src\external\glfw\docs\html\internals_guide.html" />
+    <None Include="src\external\glfw\docs\html\internal_8md.html" />
+    <None Include="src\external\glfw\docs\html\intro_8md.html" />
+    <None Include="src\external\glfw\docs\html\intro_guide.html" />
+    <None Include="src\external\glfw\docs\html\main_8md.html" />
+    <None Include="src\external\glfw\docs\html\monitor_8md.html" />
+    <None Include="src\external\glfw\docs\html\monitor_guide.html" />
+    <None Include="src\external\glfw\docs\html\moving_8md.html" />
+    <None Include="src\external\glfw\docs\html\moving_guide.html" />
+    <None Include="src\external\glfw\docs\html\news.html" />
+    <None Include="src\external\glfw\docs\html\news_8md.html" />
+    <None Include="src\external\glfw\docs\html\pages.html" />
+    <None Include="src\external\glfw\docs\html\quick_8md.html" />
+    <None Include="src\external\glfw\docs\html\quick_guide.html" />
+    <None Include="src\external\glfw\docs\html\struct_g_l_f_wallocator.html" />
+    <None Include="src\external\glfw\docs\html\struct_g_l_f_wgamepadstate.html" />
+    <None Include="src\external\glfw\docs\html\struct_g_l_f_wgammaramp.html" />
+    <None Include="src\external\glfw\docs\html\struct_g_l_f_wimage.html" />
+    <None Include="src\external\glfw\docs\html\struct_g_l_f_wvidmode.html" />
+    <None Include="src\external\glfw\docs\html\topics.html" />
+    <None Include="src\external\glfw\docs\html\vulkan_8md.html" />
+    <None Include="src\external\glfw\docs\html\vulkan_guide.html" />
+    <None Include="src\external\glfw\docs\html\window_8md.html" />
+    <None Include="src\external\glfw\docs\html\window_guide.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="src\external\GLFW\lib-vc2022\glfw3.lib" />
+  </ItemGroup>
+</Project>
