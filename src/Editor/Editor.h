@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <string>
+#include <Windows.h>
 
 
 namespace Editor {
@@ -20,6 +21,7 @@ namespace Editor {
 	class Logger {
 		public:
 			static void Log(const std::string& msg);
+			static void FatalError(const char* message);
 
 			static const std::vector<std::string>& GetLogs();
 

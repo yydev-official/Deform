@@ -19,70 +19,79 @@
 #include <imgui/backends/imgui_impl_glfw.h>
 #include <imgui/backends/imgui_impl_dx11.h>
 
+#include "Editor.h"
+using namespace Editor;
+
 bool DXRender::Initialize(GLFWwindow* GLFWhwnd)
 {
     HWND hwnd = glfwGetWin32Window(GLFWhwnd);
 
     // Swap chain description
+    DXGI_SWAP_CHAIN_DESC scd = {};
+    scd.BufferCount = 2;
+    scd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+    scd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+    scd.OutputWindow = hwnd;
+    scd.SampleDesc.Count = 1;
+    scd.SampleDesc.Quality = 0;
+    scd.Windowed = TRUE;
+    scd.BufferDesc.RefreshRate.Numerator = 0;
+    scd.BufferDesc.RefreshRate.Denominator = 1;
+    scd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
+    scd.Flags = 0;
+
+    D3D_FEATURE_LEVEL featureLevel;
+    ID3D11Device* device = nullptr;
+    ID3D11DeviceContext* context = nullptr;
+    IDXGISwapChain* swapChain = nullptr;
+
+    HRESULT hr = D3D11CreateDeviceAndSwapChain(
+        nullptr,
+        D3D_DRIVER_TYPE_HARDWARE,
+        0,
+        0,
+        nullptr,
+        0,
+        D3D11_SDK_VERSION,
+        &scd,
+        &swapChain,
+        &device,
+        &featureLevel,
+        &context
+    );
+
+    if (FAILED(hr))
     {
-        DXGI_SWAP_CHAIN_DESC scd = {};
-        scd.BufferCount = 2;
-        scd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
-        scd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
-        scd.OutputWindow = hwnd;
-        scd.SampleDesc.Count = 1;
-        scd.SampleDesc.Quality = 0;
-        scd.Windowed = TRUE;
-        scd.BufferDesc.RefreshRate.Numerator = 0;
-        scd.BufferDesc.RefreshRate.Denominator = 1;
-        scd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
-        scd.Flags = 0;
-
-        D3D_FEATURE_LEVEL featureLevel;
-        ID3D11Device* device = nullptr;
-        ID3D11DeviceContext* context = nullptr;
-        IDXGISwapChain* swapChain = nullptr;
-
-        HRESULT hr = D3D11CreateDeviceAndSwapChain(
-            nullptr,
-            D3D_DRIVER_TYPE_HARDWARE,
-            0,
-            0,
-            nullptr,
-            0,
-            D3D11_SDK_VERSION,
-            &scd,
-            &swapChain,
-            &device,
-            &featureLevel,
-            &context
-        );
-        if (FAILED(hr))
-            return false;
-
-        m_swapChain = swapChain;
-        m_device = device;
-        m_context = context;
+        Logger::FatalError("FATAL: directX 11 Error!");
+        return false;
     }
 
+    m_swapChain = swapChain;
+    m_device = device;
+    m_context = context;
+
     // Backbuffer RTV
+    ID3D11Texture2D* backBuffer = nullptr;
+    hr = m_swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)&backBuffer);
+    if (FAILED(hr) || !backBuffer)
     {
-        ID3D11Texture2D* backBuffer = nullptr;
-        hr = m_swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)&backBuffer);
-        if (FAILED(hr) || !backBuffer)
-            return false;
+        Logger::FatalError("Failed to get back buffer from swap chain: %08X\n");
+        return false;
+    }
 
-        D3D11_TEXTURE2D_DESC backBufferDesc = {};
-        backBuffer->GetDesc(&backBufferDesc);
-        UINT sceneWidth = backBufferDesc.Width;
-        UINT sceneHeight = backBufferDesc.Height;
-        if (sceneWidth == 0) sceneWidth = 1280;
-        if (sceneHeight == 0) sceneHeight = 720;
+    D3D11_TEXTURE2D_DESC backBufferDesc = {};
+    backBuffer->GetDesc(&backBufferDesc);
+    UINT sceneWidth = backBufferDesc.Width;
+    UINT sceneHeight = backBufferDesc.Height;
+    if (sceneWidth == 0) sceneWidth = 1280;
+    if (sceneHeight == 0) sceneHeight = 720;
 
-        hr = m_device->CreateRenderTargetView(backBuffer, nullptr, &m_rtv);
-        backBuffer->Release();
-        if (FAILED(hr) || !m_rtv)
-            return false;
+    hr = m_device->CreateRenderTargetView(backBuffer, nullptr, &m_rtv);
+    backBuffer->Release();
+    if (FAILED(hr) || !m_rtv)
+    {
+        Logger::FatalError("Failed to create render target view for back buffer: %08X\n");
+        return false;
     }
 
     // Viewport
@@ -115,16 +124,26 @@ bool DXRender::Initialize(GLFWwindow* GLFWhwnd)
 
     hr = m_device->CreateTexture2D(&td, nullptr, &m_sceneTexture);
     if (FAILED(hr) || !m_sceneTexture)
+    {
+        Logger::Log("Failed to create scene texture: %08X\n");
         return false;
+    }
 
     hr = m_device->CreateRenderTargetView(m_sceneTexture, nullptr, &m_sceneRTV);
     if (FAILED(hr) || !m_sceneRTV)
+    {
+        Logger::Log("Failed to create scene RTV: %08X\n");
         return false;
+    }
 
     hr = m_device->CreateShaderResourceView(m_sceneTexture, nullptr, &m_sceneSRV);
     if (FAILED(hr) || !m_sceneSRV)
+    {
+        Logger::Log("Failed to create scene View: %08X\n");
         return false;
+    }
 
+	Logger::Log("DirectX 11 initialization successful.");
     return true;
 }
 
@@ -135,10 +154,18 @@ bool DXRender::InitializeImgui(GLFWwindow* glfwWindow)
     ImGui::StyleColorsDark();
 
     if (!ImGui_ImplGlfw_InitForOther(glfwWindow, true))
+    {
+        Logger::Logger::FatalError("Failed to initialize ImGui GLFW backend\n");
         return false;
-    if (!ImGui_ImplDX11_Init(m_device, m_context))
-        return false;
+    }
 
+    if (!ImGui_ImplDX11_Init(m_device, m_context))
+    {
+        Logger::FatalError("Failed to initialize ImGui DX11 backend\n");
+        return false;
+    }
+
+	Logger::Log("ImGui initialization for DirectX 11 successful.");
     return true;
 }
 

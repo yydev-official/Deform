@@ -1,78 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\youssef\\3D Objects\\Deform-main\\",
+  "WorkspaceRootPath": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\Editor\\src\\logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\Editor\\src\\logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\editor\\Editor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\editor\\Editor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\imgui_internal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\external\\imgui\\imgui_internal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\editor\\src\\EditorUI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\editor\\src\\EditorUI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\graphics\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\graphics\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\init.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\init.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\core\\render\\d3d11\\DXRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\core\\render\\d3d11\\DXRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\core\\render\\d3d11\\DXRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\core\\render\\d3d11\\DXRender.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\core\\render\\d3d11\\DXRender.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\graphics\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\Editor\\src\\logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\Editor\\src\\logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\editor\\Editor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\editor\\Editor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\graphics\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\graphics\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\core\\scene\\scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\core\\scene\\scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\misc\\cpp\\imgui_stdlib.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\external\\imgui\\misc\\cpp\\imgui_stdlib.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_glfw.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\external\\imgui\\backends\\imgui_impl_glfw.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_glfw.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\external\\imgui\\backends\\imgui_impl_glfw.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_dx11.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\external\\imgui\\backends\\imgui_impl_dx11.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_dx11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\external\\imgui\\backends\\imgui_impl_dx11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_opengl3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\external\\imgui\\backends\\imgui_impl_opengl3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_opengl3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\external\\imgui\\backends\\imgui_impl_opengl3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\INCLUDE\\10.0.26100.0\\SHARED\\MINWINDEF.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,7 +33,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,229 +41,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "logger.cpp",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\Editor\\src\\logger.cpp",
-              "RelativeDocumentMoniker": "src\\Editor\\src\\logger.cpp",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\Editor\\src\\logger.cpp*",
-              "RelativeToolTip": "src\\Editor\\src\\logger.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-17T18:59:48.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "imgui_internal.h",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\imgui_internal.h",
-              "RelativeDocumentMoniker": "src\\external\\imgui\\imgui_internal.h",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\imgui_internal.h",
-              "RelativeToolTip": "src\\external\\imgui\\imgui_internal.h",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAAHIAAAAAAAAAAAAAAA==",
+              "Title": "Editor.h",
+              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\Editor\\Editor.h",
+              "RelativeDocumentMoniker": "src\\Editor\\Editor.h",
+              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\Editor\\Editor.h",
+              "RelativeToolTip": "src\\Editor\\Editor.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-17T18:50:43.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "init.h",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\init.h",
-              "RelativeDocumentMoniker": "src\\init.h",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\init.h",
-              "RelativeToolTip": "src\\init.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-17T18:26:34.817Z",
+              "WhenOpened": "2026-03-17T19:54:33.877Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Editor.h",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\Editor\\Editor.h",
-              "RelativeDocumentMoniker": "src\\Editor\\Editor.h",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\Editor\\Editor.h",
-              "RelativeToolTip": "src\\Editor\\Editor.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-17T18:23:36.769Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Window.h",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\graphics\\Window.h",
-              "RelativeDocumentMoniker": "src\\graphics\\Window.h",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\graphics\\Window.h",
-              "RelativeToolTip": "src\\graphics\\Window.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-17T18:23:35.65Z",
+              "Title": "logger.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\Editor\\src\\logger.cpp",
+              "RelativeDocumentMoniker": "src\\Editor\\src\\logger.cpp",
+              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\Editor\\src\\logger.cpp",
+              "RelativeToolTip": "src\\Editor\\src\\logger.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-17T19:54:23.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "EditorUI.cpp",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\Editor\\src\\EditorUI.cpp",
-              "RelativeDocumentMoniker": "src\\Editor\\src\\EditorUI.cpp",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\Editor\\src\\EditorUI.cpp",
-              "RelativeToolTip": "src\\Editor\\src\\EditorUI.cpp",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAAIIAAAAXAAAAAAAAAA==",
+              "Title": "Window.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\graphics\\Window.cpp",
+              "RelativeDocumentMoniker": "src\\graphics\\Window.cpp",
+              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\graphics\\Window.cpp",
+              "RelativeToolTip": "src\\graphics\\Window.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-17T18:22:30.572Z",
+              "WhenOpened": "2026-03-17T19:51:44.509Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Window.cpp",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\graphics\\Window.cpp",
-              "RelativeDocumentMoniker": "src\\graphics\\Window.cpp",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\graphics\\Window.cpp",
-              "RelativeToolTip": "src\\graphics\\Window.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAABIAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-15T20:10:44.398Z",
+              "DocumentIndex": 5,
+              "Title": "minwindef.h",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared\\minwindef.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared\\minwindef.h",
+              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared\\minwindef.h",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared\\minwindef.h",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAIEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-17T19:43:23.219Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\main.cpp",
-              "RelativeDocumentMoniker": "src\\main.cpp",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\main.cpp*",
-              "RelativeToolTip": "src\\main.cpp*",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-15T19:27:42.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "DXRender.cpp",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\core\\render\\d3d11\\DXRender.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\core\\render\\d3d11\\DXRender.cpp",
               "RelativeDocumentMoniker": "src\\core\\render\\d3d11\\DXRender.cpp",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\core\\render\\d3d11\\DXRender.cpp",
+              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\core\\render\\d3d11\\DXRender.cpp",
               "RelativeToolTip": "src\\core\\render\\d3d11\\DXRender.cpp",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAALIAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAB4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-15T19:23:20.388Z",
+              "WhenOpened": "2026-03-17T19:42:10.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DXRender.h",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\core\\render\\d3d11\\DXRender.h",
-              "RelativeDocumentMoniker": "src\\core\\render\\d3d11\\DXRender.h",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\core\\render\\d3d11\\DXRender.h",
-              "RelativeToolTip": "src\\core\\render\\d3d11\\DXRender.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-15T19:47:00.494Z",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\main.cpp",
+              "RelativeDocumentMoniker": "src\\main.cpp",
+              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\main.cpp",
+              "RelativeToolTip": "src\\main.cpp",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAwM0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-17T19:37:46.296Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "imgui_stdlib.cpp",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\misc\\cpp\\imgui_stdlib.cpp",
-              "RelativeDocumentMoniker": "src\\external\\imgui\\misc\\cpp\\imgui_stdlib.cpp",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\misc\\cpp\\imgui_stdlib.cpp",
-              "RelativeToolTip": "src\\external\\imgui\\misc\\cpp\\imgui_stdlib.cpp",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-15T19:26:19.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "scene.cpp",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\core\\scene\\scene.cpp",
-              "RelativeDocumentMoniker": "src\\core\\scene\\scene.cpp",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\core\\scene\\scene.cpp",
-              "RelativeToolTip": "src\\core\\scene\\scene.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-15T19:26:57.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "imgui_impl_opengl3.h",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_opengl3.h",
-              "RelativeDocumentMoniker": "src\\external\\imgui\\backends\\imgui_impl_opengl3.h",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_opengl3.h",
-              "RelativeToolTip": "src\\external\\imgui\\backends\\imgui_impl_opengl3.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-15T19:22:06.183Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "imgui_impl_opengl3.cpp",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_opengl3.cpp",
-              "RelativeDocumentMoniker": "src\\external\\imgui\\backends\\imgui_impl_opengl3.cpp",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_opengl3.cpp",
-              "RelativeToolTip": "src\\external\\imgui\\backends\\imgui_impl_opengl3.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-15T19:22:06.061Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "imgui_impl_glfw.h",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_glfw.h",
-              "RelativeDocumentMoniker": "src\\external\\imgui\\backends\\imgui_impl_glfw.h",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_glfw.h",
-              "RelativeToolTip": "src\\external\\imgui\\backends\\imgui_impl_glfw.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-15T19:22:05.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "imgui_impl_glfw.cpp",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_glfw.cpp",
-              "RelativeDocumentMoniker": "src\\external\\imgui\\backends\\imgui_impl_glfw.cpp",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_glfw.cpp",
-              "RelativeToolTip": "src\\external\\imgui\\backends\\imgui_impl_glfw.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-15T19:22:05.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "imgui_impl_dx11.h",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_dx11.h",
-              "RelativeDocumentMoniker": "src\\external\\imgui\\backends\\imgui_impl_dx11.h",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_dx11.h",
-              "RelativeToolTip": "src\\external\\imgui\\backends\\imgui_impl_dx11.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-15T19:22:05.721Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "imgui_impl_dx11.cpp",
-              "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_dx11.cpp",
-              "RelativeDocumentMoniker": "src\\external\\imgui\\backends\\imgui_impl_dx11.cpp",
-              "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform-main\\src\\external\\imgui\\backends\\imgui_impl_dx11.cpp",
-              "RelativeToolTip": "src\\external\\imgui\\backends\\imgui_impl_dx11.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-15T19:22:05.573Z"
             }
           ]
         }

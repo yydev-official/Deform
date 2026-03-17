@@ -27,8 +27,8 @@ UI editorUI;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 {
-    if (!Initializer.InitGLFW()) { printf("InitGLFW FAILED\n");  return -1; }
-    if (!Initializer.InitD3d11()) { printf("InitD3d11 FAILED\n"); return -1; }
+    if (!Initializer.InitGLFW()) { Logger::Log("InitGLFW FAILED\n");  return -1; }
+    if (!Initializer.InitD3d11()) { Logger::Log("InitD3d11 FAILED\n"); return -1; }
 
     ImGuiIO& io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
@@ -174,6 +174,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
         d3d11renderer.m_swapChain->Present(1, 0);
     }
 
+
+	Logger::Log("Exiting main loop. Cleaning up and shutting down.");
     return 0;
 }
 
@@ -201,6 +203,7 @@ bool Init::InitGLFW()
 
     glfwSetFramebufferSizeCallback(GLFWHandler.GetWindow(), framebuffer_size_callback);
 
+	Logger::Log("GLFW initialization successful.");
     return true;
 }
 
