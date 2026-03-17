@@ -1,0 +1,29 @@
+﻿  Vector.cpp
+  Object.cpp
+  DXRender.cpp
+  scene.cpp
+  EditorUI.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(130,9): warning C4005: 'APIENTRY': ridefinizione macro
+  (compilazione del file di origine 'src/editor/src/EditorUI.cpp')
+      C:\Users\youssef\3D Objects\Deform_Engine\Deform\src\external\GLFW\include\GLFW\glfw3.h(123,11):
+      vedi la precedente definizione di 'APIENTRY'
+  
+  logger.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(130,9): warning C4005: 'APIENTRY': ridefinizione macro
+  (compilazione del file di origine 'src/Editor/src/logger.cpp')
+      C:\Users\youssef\3D Objects\Deform_Engine\Deform\src\external\GLFW\include\GLFW\glfw3.h(123,11):
+      vedi la precedente definizione di 'APIENTRY'
+  
+  imgui_impl_dx11.cpp
+  imgui_impl_glfw.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  imgui_stdlib.cpp
+  Window.cpp
+  main.cpp
+  Generazione del codice in corso...
+LINK : warning LNK4075: '/INCREMENTAL' ignorato a causa della specifica di '/OPT:ICF'
+  Deform Engine.vcxproj -> C:\Users\youssef\3D Objects\Deform_Engine\Deform\x64\Release\Deform Engine.exe

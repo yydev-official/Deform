@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\core\\render\\d3d11\\DXRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\core\\render\\d3d11\\DXRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\core\\render\\d3d11\\DXRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\core\\render\\d3d11\\DXRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\Editor\\src\\logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -33,7 +33,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -93,20 +93,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DXRender.cpp",
               "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\core\\render\\d3d11\\DXRender.cpp",
               "RelativeDocumentMoniker": "src\\core\\render\\d3d11\\DXRender.cpp",
               "ToolTip": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\core\\render\\d3d11\\DXRender.cpp",
               "RelativeToolTip": "src\\core\\render\\d3d11\\DXRender.cpp",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAAB4AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-17T19:42:10.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\youssef\\3D Objects\\Deform_Engine\\Deform\\src\\main.cpp",
               "RelativeDocumentMoniker": "src\\main.cpp",
