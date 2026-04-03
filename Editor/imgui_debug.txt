@@ -1,0 +1,5 @@
+cmdLists=2
+totalVtx=36
+totalIdx=78
+framebufferWidth=1280
+framebufferHeight=720

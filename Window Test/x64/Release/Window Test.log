@@ -1,0 +1,15 @@
+﻿C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppBuild.targets(537,5): warning MSB8004: la directory Output non termina con una barra finale. Nell'istanza della compilazione verrà aggiunta la barra poiché è necessaria per consentire la corretta valutazione della directory Output.
+  imgui_impl_dx11.cpp
+  imgui_impl_glfw.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  imgui_stdlib.cpp
+  main.cpp
+  Generazione codice in corso...
+  Previous IPDB not found, fall back to full compilation.
+  All 1980 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generazione codice terminata
+  Window Test.vcxproj -> C:\Users\youssef\OneDrive\lavori\Deform_Engine\Window Test\Bin\Window Test.exe

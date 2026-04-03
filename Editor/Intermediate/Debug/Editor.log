@@ -1,0 +1,15 @@
+﻿C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppBuild.targets(536,5): warning MSB8004: la directory Intermediate non termina con una barra finale. Nell'istanza della compilazione verrà aggiunta la barra poiché è necessaria per consentire la corretta valutazione della directory Intermediate.
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppBuild.targets(537,5): warning MSB8004: la directory Output non termina con una barra finale. Nell'istanza della compilazione verrà aggiunta la barra poiché è necessaria per consentire la corretta valutazione della directory Output.
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppBuild.targets(551,5): warning MSB8028: la directory intermedia (.\Intermediate\Debug\) contiene file condivisi da un altro progetto (Deform Engine.vcxproj). Tale condizione può comportare un comportamento di pulizia e ricompilazione non corretto.
+  main.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(130,9): warning C4005: 'APIENTRY': ridefinizione macro
+  (compilazione del file di origine 'src/main.cpp')
+      C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\src\external\GLFW\include\GLFW\glfw3.h(125,11):
+      vedi la precedente definizione di 'APIENTRY'
+  
+C:\Users\youssef\OneDrive\lavori\Deform_Engine\Editor\src\main.cpp(28,92): warning C4244: 'argomento': conversione da 'int' a 'float'. Possibile perdita di dati.
+C:\Users\youssef\OneDrive\lavori\Deform_Engine\Editor\src\main.cpp(28,70): warning C4244: 'argomento': conversione da 'int' a 'float'. Possibile perdita di dati.
+  Editor.vcxproj -> C:\Users\youssef\OneDrive\lavori\Deform_Engine\Editor\Bin\Debug\Deform_Editor.exe
+  0 File copiati
+  0 File copiati
+  0 File copiati
