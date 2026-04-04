@@ -1,0 +1,5 @@
+﻿C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppBuild.targets(551,5): warning MSB8028: la directory intermedia (.\Intermediate\Release\) contiene file condivisi da un altro progetto (Deform Engine.vcxproj). Tale condizione può comportare un comportamento di pulizia e ricompilazione non corretto.
+  DXRender.cpp
+LINK : warning LNK4075: '/INCREMENTAL' ignorato a causa della specifica di '/OPT:ICF'
+     Creazione della libreria .\bin\Release\deformEngine.lib e dell'oggetto .\bin\Release\deformEngine.exp
+  Deform Engine.vcxproj -> C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\bin\Release\deformEngine.dll

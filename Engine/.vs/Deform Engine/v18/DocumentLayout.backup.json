@@ -1,0 +1,419 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{03BA787B-56FD-46F1-8F81-9F6929298010}|..\\Editor\\Editor.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\graphics\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\Engine\\graphics\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BA787B-56FD-46F1-8F81-9F6929298010}|..\\Editor\\Editor.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\imgui.ini||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BA787B-56FD-46F1-8F81-9F6929298010}|..\\Editor\\Editor.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\Editor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BA787B-56FD-46F1-8F81-9F6929298010}|..\\Editor\\Editor.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\Bin\\Release\\imgui_debug.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BA787B-56FD-46F1-8F81-9F6929298010}|..\\Editor\\Editor.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\Bin\\Debug\\editor_trace.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\d3d11\\DXRender.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\Engine\\core\\render\\d3d11\\DXRender.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\d3d11\\DXRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\Engine\\core\\render\\d3d11\\DXRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BA787B-56FD-46F1-8F81-9F6929298010}|..\\Editor\\Editor.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\EditorUIComponents\\MenuBar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\graphics\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\Engine\\graphics\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\Engine\\core\\logger.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BA787B-56FD-46F1-8F81-9F6929298010}|..\\Editor\\Editor.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\EditorUIComponents\\Hierarchy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BA787B-56FD-46F1-8F81-9F6929298010}|..\\Editor\\Editor.vcxproj|C:\\PROGRAM FILES (X86)\\WINDOWS KITS\\10\\INCLUDE\\10.0.26100.0\\SHARED\\MINWINDEF.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\EngineAPI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\Engine\\EngineAPI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\opengl\\GLRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\Engine\\core\\render\\opengl\\GLRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\opengl\\GLRender.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{320E22EA-00AC-7A8E-974B-A890D399D822}|Deform Engine.vcxproj|solutionrelative:src\\Engine\\core\\render\\opengl\\GLRender.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BA787B-56FD-46F1-8F81-9F6929298010}|..\\Editor\\Editor.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\EditorUIComponents\\Console.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BA787B-56FD-46F1-8F81-9F6929298010}|..\\Editor\\Editor.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\assets\\shaders\\sky.hlsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03BA787B-56FD-46F1-8F81-9F6929298010}|..\\Editor\\Editor.vcxproj|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\external\\GLFW\\include\\GLFW\\glfw3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\vulkan\\VKRender.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Engine\\core\\render\\vulkan\\VKRender.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\external\\Deform_ENGINE\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\vulkan\\VKRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\Engine\\core\\render\\vulkan\\VKRender.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\external\\imgui\\backends\\imgui_impl_opengl3_loader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\imgui_debug.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "imgui.ini",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\imgui.ini",
+              "RelativeDocumentMoniker": "..\\Editor\\imgui.ini",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\imgui.ini",
+              "RelativeToolTip": "..\\Editor\\imgui.ini",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002768|",
+              "WhenOpened": "2026-03-29T19:50:48.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\main.cpp",
+              "RelativeDocumentMoniker": "..\\Editor\\src\\main.cpp",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\main.cpp*",
+              "RelativeToolTip": "..\\Editor\\src\\main.cpp*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-29T19:48:32.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "imgui_debug.txt",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\Bin\\Release\\imgui_debug.txt",
+              "RelativeDocumentMoniker": "..\\Editor\\Bin\\Release\\imgui_debug.txt",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\Bin\\Release\\imgui_debug.txt",
+              "RelativeToolTip": "..\\Editor\\Bin\\Release\\imgui_debug.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-29T19:40:56.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Editor.h",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\Editor.h",
+              "RelativeDocumentMoniker": "..\\Editor\\src\\Editor.h",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\Editor.h",
+              "RelativeToolTip": "..\\Editor\\src\\Editor.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-29T15:00:45.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Hierarchy.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\EditorUIComponents\\Hierarchy.cpp",
+              "RelativeDocumentMoniker": "..\\Editor\\src\\EditorUIComponents\\Hierarchy.cpp",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\EditorUIComponents\\Hierarchy.cpp",
+              "RelativeToolTip": "..\\Editor\\src\\EditorUIComponents\\Hierarchy.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-29T17:30:31.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "logger.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\logger.cpp",
+              "RelativeDocumentMoniker": "src\\Engine\\core\\logger.cpp",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\logger.cpp",
+              "RelativeToolTip": "src\\Engine\\core\\logger.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-29T15:00:45.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DXRender.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\d3d11\\DXRender.cpp",
+              "RelativeDocumentMoniker": "src\\Engine\\core\\render\\d3d11\\DXRender.cpp",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\d3d11\\DXRender.cpp",
+              "RelativeToolTip": "src\\Engine\\core\\render\\d3d11\\DXRender.cpp",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAAAGgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-29T15:00:45.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Window.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\graphics\\Window.cpp",
+              "RelativeDocumentMoniker": "src\\Engine\\graphics\\Window.cpp",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\graphics\\Window.cpp",
+              "RelativeToolTip": "src\\Engine\\graphics\\Window.cpp",
+              "ViewState": "AgIAADwAAAAAAAAAAAAhwFUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-29T15:00:45.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MenuBar.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\EditorUIComponents\\MenuBar.cpp",
+              "RelativeDocumentMoniker": "..\\Editor\\src\\EditorUIComponents\\MenuBar.cpp",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\EditorUIComponents\\MenuBar.cpp",
+              "RelativeToolTip": "..\\Editor\\src\\EditorUIComponents\\MenuBar.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-29T15:00:45.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "editor_trace.txt",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\Bin\\Debug\\editor_trace.txt",
+              "RelativeDocumentMoniker": "..\\Editor\\Bin\\Debug\\editor_trace.txt",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\Bin\\Debug\\editor_trace.txt",
+              "RelativeToolTip": "..\\Editor\\Bin\\Debug\\editor_trace.txt",
+              "ViewState": "AgIAAEAMAAAAAAAAAAAAAD0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-29T19:40:42.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Window.h",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\graphics\\Window.h",
+              "RelativeDocumentMoniker": "src\\Engine\\graphics\\Window.h",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\graphics\\Window.h",
+              "RelativeToolTip": "src\\Engine\\graphics\\Window.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-29T15:00:45.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DXRender.h",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\d3d11\\DXRender.h",
+              "RelativeDocumentMoniker": "src\\Engine\\core\\render\\d3d11\\DXRender.h",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\d3d11\\DXRender.h",
+              "RelativeToolTip": "src\\Engine\\core\\render\\d3d11\\DXRender.h",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-29T15:00:45.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "imgui_debug.txt",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\imgui_debug.txt",
+              "RelativeDocumentMoniker": "..\\Editor\\imgui_debug.txt",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\imgui_debug.txt",
+              "RelativeToolTip": "..\\Editor\\imgui_debug.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-29T15:00:45.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EngineAPI.h",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\EngineAPI.h",
+              "RelativeDocumentMoniker": "src\\Engine\\EngineAPI.h",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\EngineAPI.h",
+              "RelativeToolTip": "src\\Engine\\EngineAPI.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-29T15:00:45.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Engine.h",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine.h",
+              "RelativeDocumentMoniker": "src\\Engine.h",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine.h*",
+              "RelativeToolTip": "src\\Engine.h*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-29T15:00:45.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GLRender.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\opengl\\GLRender.cpp",
+              "RelativeDocumentMoniker": "src\\Engine\\core\\render\\opengl\\GLRender.cpp",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\opengl\\GLRender.cpp",
+              "RelativeToolTip": "src\\Engine\\core\\render\\opengl\\GLRender.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-29T15:00:45.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "minwindef.h",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared\\minwindef.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared\\minwindef.h",
+              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared\\minwindef.h",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared\\minwindef.h",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAIEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-29T17:25:52.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GLRender.h",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\opengl\\GLRender.h",
+              "RelativeDocumentMoniker": "src\\Engine\\core\\render\\opengl\\GLRender.h",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\opengl\\GLRender.h",
+              "RelativeToolTip": "src\\Engine\\core\\render\\opengl\\GLRender.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-29T15:00:45.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "imgui_impl_opengl3_loader.h",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\external\\imgui\\backends\\imgui_impl_opengl3_loader.h",
+              "RelativeDocumentMoniker": "..\\Editor\\external\\imgui\\backends\\imgui_impl_opengl3_loader.h",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\external\\imgui\\backends\\imgui_impl_opengl3_loader.h",
+              "RelativeToolTip": "..\\Editor\\external\\imgui\\backends\\imgui_impl_opengl3_loader.h",
+              "ViewState": "AgIAAN8BAAAAAAAAAAAAAPIBAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-29T17:19:50.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "VKRender.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\vulkan\\VKRender.cpp",
+              "RelativeDocumentMoniker": "src\\Engine\\core\\render\\vulkan\\VKRender.cpp",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\vulkan\\VKRender.cpp",
+              "RelativeToolTip": "src\\Engine\\core\\render\\vulkan\\VKRender.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-29T15:00:45.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Console.cpp",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\EditorUIComponents\\Console.cpp",
+              "RelativeDocumentMoniker": "..\\Editor\\src\\EditorUIComponents\\Console.cpp",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\src\\EditorUIComponents\\Console.cpp",
+              "RelativeToolTip": "..\\Editor\\src\\EditorUIComponents\\Console.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-29T15:00:45.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Engine.h",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\external\\Deform_ENGINE\\Engine.h",
+              "RelativeDocumentMoniker": "..\\Editor\\external\\Deform_ENGINE\\Engine.h",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\external\\Deform_ENGINE\\Engine.h",
+              "RelativeToolTip": "..\\Editor\\external\\Deform_ENGINE\\Engine.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-29T11:12:03.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "glfw3.h",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\external\\GLFW\\include\\GLFW\\glfw3.h",
+              "RelativeDocumentMoniker": "..\\Editor\\external\\GLFW\\include\\GLFW\\glfw3.h",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\external\\GLFW\\include\\GLFW\\glfw3.h",
+              "RelativeToolTip": "..\\Editor\\external\\GLFW\\include\\GLFW\\glfw3.h",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAIwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-29T15:00:45.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "sky.hlsl",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\assets\\shaders\\sky.hlsl",
+              "RelativeDocumentMoniker": "..\\Editor\\assets\\shaders\\sky.hlsl",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Editor\\assets\\shaders\\sky.hlsl",
+              "RelativeToolTip": "..\\Editor\\assets\\shaders\\sky.hlsl",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2026-03-29T15:00:45.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "VKRender.h",
+              "DocumentMoniker": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\vulkan\\VKRender.h",
+              "RelativeDocumentMoniker": "src\\Engine\\core\\render\\vulkan\\VKRender.h",
+              "ToolTip": "C:\\Users\\youssef\\OneDrive\\lavori\\Deform_Engine\\Deform\\src\\Engine\\core\\render\\vulkan\\VKRender.h",
+              "RelativeToolTip": "src\\Engine\\core\\render\\vulkan\\VKRender.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-28T15:15:19.271Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\src\Engine\core\maths\vector\Vector.cpp;C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\Intermediate\Release\Vector.obj
+C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\src\Engine\core\Object\Object.cpp;C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\Intermediate\Release\Object.obj
+C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\src\Engine\core\render\d3d11\DXRender.cpp;C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\Intermediate\Release\DXRender.obj
+C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\src\Engine\core\render\opengl\GLRender.cpp;C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\Intermediate\Release\GLRender.obj
+C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\src\Engine\core\scene\scene.cpp;C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\Intermediate\Release\scene.obj
+C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\src\Engine\graphics\Window.cpp;C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\Intermediate\Release\Window.obj
+C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\src\Engine\core\logger.cpp;C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\Intermediate\Release\logger.obj
+C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\src\external\DDSTextureLoader\DDSTextureLoader11.cpp;C:\Users\youssef\OneDrive\lavori\Deform_Engine\Deform\Intermediate\Release\DDSTextureLoader11.obj
