@@ -1,7 +1,6 @@
-# Deform Engine
+ # Deform Engine
 
-> **Note:** This is the archived C++ version of Deform.  
-> The active version is written in Rust and is Maintained. 
+> **Note:** This is C++ version of Deform.   
 > [Check out the main branch →](https://github.com/deform-labs/Deform)
 
 > A custom-built C++ game engine focused on transformation and deformation systems.

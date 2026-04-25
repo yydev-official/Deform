@@ -3,13 +3,13 @@
 // For more documentation on how to configure debug tasks,
 // see: https://zed.dev/docs/debugger
 [
-  {
-    "adapter": "CodeLLDB",
-    "label": "Launch.ps1 (CodeLLDB)",
-    "request": "launch",
-    "name": "Launch.ps1 (CodeLLDB)",
-    "program": ".\\build\\Editor\\Release\\Editor.exe",
-    "stopOnEntry": true,
-    "cwd": ".\\build\\Editor\\Release",
-  },
+	{
+		"adapter": "CodeLLDB",
+		"label": "Launch.ps1",
+		"request": "launch",
+		"name": "Launch.ps1",
+		"program": ".\\build\\Editor\\Release\\Editor.exe",
+		"stopOnEntry": true,
+		"cwd": ".\\build\\Editor\\Release",
+	},
 ]

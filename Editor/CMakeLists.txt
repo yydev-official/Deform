@@ -1,5 +1,10 @@
-file(GLOB_RECURSE EDITOR_SOURCES
-    "src/*.cpp"
+set(EDITOR_SOURCES
+    src/main.cpp
+    src/Editor.h
+    src/EditorUIComponents/Console.cpp
+    src/EditorUIComponents/Hierarchy.cpp
+    src/EditorUIComponents/Inspector.cpp
+    src/EditorUIComponents/MenuBar.cpp
 )
 
 set(IMGUI_SOURCES
