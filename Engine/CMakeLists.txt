@@ -4,8 +4,14 @@ set(ENGINE_SOURCES
     src/Engine/core/logger.cpp
     src/Engine/core/maths/vector/Vector.cpp
     src/Engine/core/maths/vector/Vector.h
+    src/Engine/core/maths/Matrix4x4.cpp
+    src/Engine/core/maths/Matrix4x4.h
+    src/Engine/core/maths/Quaternion.cpp
+    src/Engine/core/maths/Quaternion.h
     src/Engine/core/Object/Object.cpp
     src/Engine/core/Object/Object.h
+    src/Engine/core/ecs/ECS.cpp
+    src/Engine/core/ecs/ECS.h
     src/Engine/core/render/IRenderer.h
     src/Engine/core/render/d3d11/DXRender.cpp
     src/Engine/core/render/d3d11/DXRender.h
@@ -13,8 +19,6 @@ set(ENGINE_SOURCES
     src/Engine/core/render/opengl/GLRender.h
     src/Engine/core/render/vulkan/VKRender.cpp
     src/Engine/core/render/vulkan/VKRender.h
-    src/Engine/core/scene/scene.cpp
-    src/Engine/core/scene/scene.h
     src/Engine/graphics/Window.cpp
     src/Engine/graphics/Window.h
 )

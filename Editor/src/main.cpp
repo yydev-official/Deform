@@ -40,6 +40,10 @@ public:
                                             static_cast<float>(m_window.GetHeight()));
 
         m_initialized = true;
+
+        // Crea scena di default
+        m_state.scene->CreateNewScene();
+
         return true;
     }
 
@@ -104,9 +108,9 @@ private:
         Editor::UI::MainBar::UpdateMainBar(m_state);
 
         if (m_state.showHierarchy)
-            Editor::UI::Hierarchy::UpdateHierarchy();
+            Editor::UI::Hierarchy::UpdateHierarchy(m_state);
         if (m_state.showInspector)
-            Editor::UI::Inspector::UpdateInspector();
+            Editor::UI::Inspector::UpdateInspector(m_state);
         if (m_state.showConsole)
             Editor::UI::Console::UpdateConsole();
         if (m_state.showScene) {

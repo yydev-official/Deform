@@ -1,27 +1,92 @@
 // Vector.cpp
 #include "Vector.h"
-#include <vector>
+#include <cmath>
+#include <stdexcept>
 
-// This is a 2D vector class that represents a point or direction in 2D space. It has two float members, X and Y, which store the horizontal and vertical components of the vector, respectively. The class provides constructors for initializing the vector and getter methods to access its components.
-Vector2D::Vector2D() : X(0), Y(0)
+// ─────────────────────────────────────────────
+//  Vector2D
+// ─────────────────────────────────────────────
+Vector2D::Vector2D() : X(0), Y(0) {}
+Vector2D::Vector2D(float x, float y) : X(x), Y(y) {}
+
+Vector2D  Vector2D::operator+(const Vector2D& o) const { return {X + o.X, Y + o.Y}; }
+Vector2D  Vector2D::operator-(const Vector2D& o) const { return {X - o.X, Y - o.Y}; }
+Vector2D  Vector2D::operator*(float s)           const { return {X * s,   Y * s};   }
+Vector2D  Vector2D::operator/(float s)           const { return {X / s,   Y / s};   }
+Vector2D& Vector2D::operator+=(const Vector2D& o) { X += o.X; Y += o.Y; return *this; }
+Vector2D& Vector2D::operator-=(const Vector2D& o) { X -= o.X; Y -= o.Y; return *this; }
+Vector2D& Vector2D::operator*=(float s)           { X *= s;   Y *= s;   return *this; }
+bool      Vector2D::operator==(const Vector2D& o) const { return X == o.X && Y == o.Y; }
+bool      Vector2D::operator!=(const Vector2D& o) const { return !(*this == o); }
+
+float    Vector2D::Length()        const { return std::sqrt(X*X + Y*Y); }
+float    Vector2D::LengthSquared() const { return X*X + Y*Y; }
+float    Vector2D::Dot(const Vector2D& o) const { return X*o.X + Y*o.Y; }
+
+Vector2D Vector2D::Normalized() const
 {
-    // Default constructor initializes the vector to (0, 0)
+    float len = Length();
+    if (len < 1e-8f) return {0, 0};
+    return {X / len, Y / len};
 }
 
-// This is a 2D vector class that represents a point or direction in 2D space. It has two float members, X and Y, which store the horizontal and vertical components of the vector, respectively. The class provides constructors for initializing the vector and getter methods to access its components.
-Vector2D::Vector2D(float x, float y) : X(x), Y(y)
+void Vector2D::Normalize()
 {
-    // Constructor that initializes the vector to (x, y)
+    float len = Length();
+    if (len < 1e-8f) { X = Y = 0; return; }
+    X /= len; Y /= len;
 }
 
-// This is a 3D vector class that represents a point or direction in 3D space. It has three float members, X, Y, and Z, which store the horizontal, vertical, and depth components of the vector, respectively. The class provides constructors for initializing the vector and getter methods to access its components.
-Vector3D::Vector3D() : X(0), Y(0), Z(0)
+// ─────────────────────────────────────────────
+//  Vector3D
+// ─────────────────────────────────────────────
+Vector3D::Vector3D() : X(0), Y(0), Z(0) {}
+Vector3D::Vector3D(float x, float y, float z) : X(x), Y(y), Z(z) {}
+
+Vector3D  Vector3D::operator+(const Vector3D& o) const { return {X+o.X, Y+o.Y, Z+o.Z}; }
+Vector3D  Vector3D::operator-(const Vector3D& o) const { return {X-o.X, Y-o.Y, Z-o.Z}; }
+Vector3D  Vector3D::operator*(float s)           const { return {X*s,   Y*s,   Z*s};   }
+Vector3D  Vector3D::operator/(float s)           const { return {X/s,   Y/s,   Z/s};   }
+Vector3D  Vector3D::operator-()                  const { return {-X,    -Y,    -Z};    }
+Vector3D& Vector3D::operator+=(const Vector3D& o) { X+=o.X; Y+=o.Y; Z+=o.Z; return *this; }
+Vector3D& Vector3D::operator-=(const Vector3D& o) { X-=o.X; Y-=o.Y; Z-=o.Z; return *this; }
+Vector3D& Vector3D::operator*=(float s)           { X*=s;   Y*=s;   Z*=s;   return *this; }
+bool      Vector3D::operator==(const Vector3D& o) const { return X==o.X && Y==o.Y && Z==o.Z; }
+bool      Vector3D::operator!=(const Vector3D& o) const { return !(*this == o); }
+
+float    Vector3D::Length()        const { return std::sqrt(X*X + Y*Y + Z*Z); }
+float    Vector3D::LengthSquared() const { return X*X + Y*Y + Z*Z; }
+float    Vector3D::Dot(const Vector3D& o)   const { return X*o.X + Y*o.Y + Z*o.Z; }
+
+Vector3D Vector3D::Cross(const Vector3D& o) const
 {
-    // Default constructor initializes the vector to (0, 0, 0)
+    return {
+        Y * o.Z - Z * o.Y,
+        Z * o.X - X * o.Z,
+        X * o.Y - Y * o.X
+    };
 }
 
-// This is a 3D vector class that represents a point or direction in 3D space. It has three float members, X, Y, and Z, which store the horizontal, vertical, and depth components of the vector, respectively. The class provides constructors for initializing the vector and getter methods to access its components.
-Vector3D::Vector3D(float x, float y, float z) : X(x), Y(y), Z(z)
+Vector3D Vector3D::Normalized() const
 {
-    // Constructor that initializes the vector to (x, y, z)
+    float len = Length();
+    if (len < 1e-8f) return {0, 0, 0};
+    return {X/len, Y/len, Z/len};
+}
+
+void Vector3D::Normalize()
+{
+    float len = Length();
+    if (len < 1e-8f) { X = Y = Z = 0; return; }
+    X /= len; Y /= len; Z /= len;
+}
+
+float Vector3D::Distance(const Vector3D& a, const Vector3D& b)
+{
+    return (b - a).Length();
+}
+
+Vector3D Vector3D::Lerp(const Vector3D& a, const Vector3D& b, float t)
+{
+    return a + (b - a) * t;
 }
