@@ -1,7 +1,7 @@
 set(EDITOR_SOURCES
     src/main.cpp
     src/Editor.h
-    src/EditorUIComponents/Console.cpp
+    src/EditorUIComponents/Assets.cpp
     src/EditorUIComponents/Hierarchy.cpp
     src/EditorUIComponents/Inspector.cpp
     src/EditorUIComponents/MenuBar.cpp
