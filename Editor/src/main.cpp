@@ -2,6 +2,7 @@
 
 #include <GLFW/glfw3.h>
 #include <string>
+#include <filesystem>
 
 // ImGui backends for GLFW and DirectX 11
 #include "../external/imgui/backends/imgui_impl_dx11.h"
@@ -49,13 +50,17 @@ public:
 
     int Run() {
         deform::Logger::Log("Entering main application loop.");
-        deform::Logger::Log("ImGui Display Size: " + std::to_string(ImGui::GetIO().DisplaySize.x) +
-                           "x" + std::to_string(ImGui::GetIO().DisplaySize.y));
 
         while (!m_window.ShouldClose()) {
             m_window.PollEvents();
-            m_renderer.BeginFrame(m_state.clearColor);
 
+            // ── 1. Render scene into off-screen texture ──────────────
+            RenderScene();
+
+            // ── 2. Begin backbuffer pass for ImGui ──────────────────
+            m_renderer.BeginBackbufferPass(m_state.clearColor);
+
+            // ── 3. ImGui frame ───────────────────────────────────────
             ImGui_ImplDX11_NewFrame();
             ImGui_ImplGlfw_NewFrame();
             ImGui::NewFrame();
@@ -64,7 +69,11 @@ public:
             UpdatePanels();
 
             ImGui::Render();
+
+            // Restore backbuffer before ImGui draw (ImGui may rebind RTs)
+            m_renderer.BeginBackbufferPass(m_state.clearColor);
             ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+
             m_renderer.Present();
         }
 
@@ -103,7 +112,68 @@ private:
         m_renderer.Resize(static_cast<unsigned int>(width), static_cast<unsigned int>(height));
     }
 
-    /// Updates the panels in the editor, including the main bar, hierarchy, inspector, and console.
+    /// Renders the 3D scene into the off-screen scene texture
+    void RenderScene() {
+        auto* ctx = m_renderer.GetContext();
+        auto* sceneRTV = m_renderer.GetSceneRenderTargetView();
+        if (!ctx || !sceneRTV) return;
+
+        // Clear scene texture with a dark background
+        const float sceneClear[4] = { 0.12f, 0.12f, 0.12f, 1.0f };
+        ctx->OMSetRenderTargets(1, &sceneRTV, nullptr);
+        ctx->ClearRenderTargetView(sceneRTV, sceneClear);
+
+        // TODO: actual draw calls go here once mesh rendering is implemented
+        // For now the scene panel shows a cleared color (proves the pipeline works)
+    }
+
+    /// Applies a dark editor theme to ImGui
+    void ApplyEditorTheme() {
+        ImGuiStyle& style = ImGui::GetStyle();
+        ImVec4* colors = style.Colors;
+
+        colors[ImGuiCol_WindowBg]          = ImVec4(0.13f, 0.13f, 0.14f, 1.00f);
+        colors[ImGuiCol_ChildBg]           = ImVec4(0.10f, 0.10f, 0.11f, 1.00f);
+        colors[ImGuiCol_PopupBg]           = ImVec4(0.15f, 0.15f, 0.16f, 1.00f);
+        colors[ImGuiCol_Border]            = ImVec4(0.25f, 0.25f, 0.28f, 1.00f);
+        colors[ImGuiCol_FrameBg]           = ImVec4(0.18f, 0.18f, 0.20f, 1.00f);
+        colors[ImGuiCol_FrameBgHovered]    = ImVec4(0.22f, 0.22f, 0.25f, 1.00f);
+        colors[ImGuiCol_FrameBgActive]     = ImVec4(0.26f, 0.26f, 0.30f, 1.00f);
+        colors[ImGuiCol_TitleBg]           = ImVec4(0.09f, 0.09f, 0.10f, 1.00f);
+        colors[ImGuiCol_TitleBgActive]     = ImVec4(0.09f, 0.09f, 0.10f, 1.00f);
+        colors[ImGuiCol_MenuBarBg]         = ImVec4(0.10f, 0.10f, 0.11f, 1.00f);
+        colors[ImGuiCol_ScrollbarBg]       = ImVec4(0.10f, 0.10f, 0.11f, 1.00f);
+        colors[ImGuiCol_ScrollbarGrab]     = ImVec4(0.30f, 0.30f, 0.33f, 1.00f);
+        colors[ImGuiCol_CheckMark]         = ImVec4(0.40f, 0.70f, 1.00f, 1.00f);
+        colors[ImGuiCol_SliderGrab]        = ImVec4(0.40f, 0.70f, 1.00f, 1.00f);
+        colors[ImGuiCol_Button]            = ImVec4(0.20f, 0.20f, 0.23f, 1.00f);
+        colors[ImGuiCol_ButtonHovered]     = ImVec4(0.30f, 0.50f, 0.80f, 1.00f);
+        colors[ImGuiCol_ButtonActive]      = ImVec4(0.25f, 0.45f, 0.75f, 1.00f);
+        colors[ImGuiCol_Header]            = ImVec4(0.20f, 0.35f, 0.60f, 1.00f);
+        colors[ImGuiCol_HeaderHovered]     = ImVec4(0.30f, 0.50f, 0.80f, 1.00f);
+        colors[ImGuiCol_HeaderActive]      = ImVec4(0.25f, 0.45f, 0.75f, 1.00f);
+        colors[ImGuiCol_Tab]               = ImVec4(0.13f, 0.13f, 0.14f, 1.00f);
+        colors[ImGuiCol_TabHovered]        = ImVec4(0.30f, 0.50f, 0.80f, 1.00f);
+        colors[ImGuiCol_TabActive]         = ImVec4(0.20f, 0.35f, 0.60f, 1.00f);
+        colors[ImGuiCol_TabUnfocused]      = ImVec4(0.10f, 0.10f, 0.11f, 1.00f);
+        colors[ImGuiCol_TabUnfocusedActive]= ImVec4(0.15f, 0.25f, 0.45f, 1.00f);
+        colors[ImGuiCol_DockingPreview]    = ImVec4(0.40f, 0.70f, 1.00f, 0.70f);
+        colors[ImGuiCol_Text]              = ImVec4(0.90f, 0.90f, 0.90f, 1.00f);
+        colors[ImGuiCol_TextDisabled]      = ImVec4(0.45f, 0.45f, 0.50f, 1.00f);
+        colors[ImGuiCol_Separator]         = ImVec4(0.25f, 0.25f, 0.28f, 1.00f);
+
+        style.WindowRounding    = 4.0f;
+        style.FrameRounding     = 3.0f;
+        style.GrabRounding      = 3.0f;
+        style.TabRounding       = 3.0f;
+        style.FramePadding      = ImVec2(6, 4);
+        style.ItemSpacing       = ImVec2(8, 5);
+        style.WindowPadding     = ImVec2(8, 8);
+        style.IndentSpacing     = 16.0f;
+        style.ScrollbarSize     = 12.0f;
+    }
+
+    /// Updates the panels in the editor
     void UpdatePanels() {
         Editor::UI::MainBar::UpdateMainBar(m_state);
 
@@ -113,35 +183,48 @@ private:
             Editor::UI::Inspector::UpdateInspector(m_state);
         if (m_state.showConsole)
             Editor::UI::Console::UpdateConsole();
+        if (m_state.showAssets)
+            Editor::UI::Assets::UpdateAssets(m_state);
         if (m_state.showScene) {
+            ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
             ImGui::Begin("Scene", &m_state.showScene);
+            ImGui::PopStyleVar();
+
             ImVec2 size = ImGui::GetContentRegionAvail();
-            if (m_renderer.m_sceneSRV)
-                ImGui::Image((ImTextureID)m_renderer.m_sceneSRV, size);
+
+            // Unbind scene SRV before using as RTV (prevents DX11 warning)
+            ID3D11ShaderResourceView* nullSRV = nullptr;
+            m_renderer.GetContext()->PSSetShaderResources(0, 1, &nullSRV);
+
+            if (m_renderer.GetSceneTextureView() && size.x > 0 && size.y > 0)
+                ImGui::Image((ImTextureID)m_renderer.GetSceneTextureView(), size);
             else
-                ImGui::TextUnformatted("(Scene texture not available)");
+                ImGui::TextUnformatted("Scene texture not available.");
+
             ImGui::End();
         }
     }
 
-    /// Updates the dock host window, setting its position and size to cover the main viewport.
+    /// Updates the dock host window
     void UpdateDockHost() {
         ImGuiViewport* viewport = ImGui::GetMainViewport();
-        ImGui::SetNextWindowPos(viewport->Pos);
-        ImGui::SetNextWindowSize(ImGui::GetIO().DisplaySize);
+        ImGui::SetNextWindowPos(viewport->WorkPos);
+        ImGui::SetNextWindowSize(viewport->WorkSize);
+        ImGui::SetNextWindowViewport(viewport->ID);
 
-        ImGuiWindowFlags hostWindowFlags =
-            ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoCollapse |
-            ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove |
-            ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoNavFocus;
+        ImGuiWindowFlags hostFlags =
+            ImGuiWindowFlags_NoTitleBar      | ImGuiWindowFlags_NoCollapse  |
+            ImGuiWindowFlags_NoResize        | ImGuiWindowFlags_NoMove      |
+            ImGuiWindowFlags_NoBringToFrontOnFocus | ImGuiWindowFlags_NoNavFocus |
+            ImGuiWindowFlags_NoBackground;
 
-        ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 0.0f);
+        ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding,  0.0f);
         ImGui::PushStyleVar(ImGuiStyleVar_WindowBorderSize, 0.0f);
+        ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
+        ImGui::Begin("##DockHost", nullptr, hostFlags);
+        ImGui::PopStyleVar(3);
 
-        ImGui::Begin("DockSpace Host", nullptr, hostWindowFlags);
-        ImGui::PopStyleVar(2);
-        ImGui::DockSpace(ImGui::GetID("DockSpace Host"),
-                         ImVec2(m_window.GetWidth(), m_window.GetHeight()),
+        ImGui::DockSpace(ImGui::GetID("MainDockSpace"), ImVec2(0, 0),
                          ImGuiDockNodeFlags_PassthruCentralNode);
         ImGui::End();
     }
@@ -174,7 +257,14 @@ private:
         IMGUI_CHECKVERSION();
         ImGui::CreateContext();
         ImGuiIO& io = ImGui::GetIO();
-        io.ConfigFlags = ImGuiConfigFlags_DockingEnable;
+        io.ConfigFlags = ImGuiConfigFlags_DockingEnable | ImGuiConfigFlags_NavEnableKeyboard;
+
+        // Load font from assets if available, otherwise use default
+        const char* fontPath = "assets/Fonts/font.ttf";
+        if (std::filesystem::exists(fontPath))
+            io.Fonts->AddFontFromFileTTF(fontPath, 15.0f);
+        else
+            io.Fonts->AddFontDefault();
 
         bool ImGuiGlfwInitialized = ImGui_ImplGlfw_InitForOther(m_window.GetWindow(), true);
         bool ImguiDX11Initialized = ImGui_ImplDX11_Init(m_renderer.GetDevice(), m_renderer.GetContext());
@@ -188,8 +278,10 @@ private:
             Shutdown();
             return false;
         }
-        deform::Logger::Log("ImGui GLFW backend initialized successfully.");
-        deform::Logger::Log("ImGui DX11 backend initialized successfully.");
+
+        ApplyEditorTheme();
+
+        deform::Logger::Log("ImGui initialized successfully.");
         return true;
     }
 
