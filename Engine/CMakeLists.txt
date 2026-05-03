@@ -1,3 +1,12 @@
+if(WIN32)
+    set(ENGINE_PLATFORM_SOURCES
+        src/Engine/core/render/d3d11/DXRender.cpp
+        src/Engine/core/render/d3d11/DXRender.h
+    )
+else()
+    set(ENGINE_PLATFORM_SOURCES "")
+endif()
+
 set(ENGINE_SOURCES
     src/Engine.h
     src/Engine/EngineAPI.h
@@ -13,45 +22,56 @@ set(ENGINE_SOURCES
     src/Engine/core/ecs/ECS.cpp
     src/Engine/core/ecs/ECS.h
     src/Engine/core/render/IRenderer.h
-    src/Engine/core/render/d3d11/DXRender.cpp
-    src/Engine/core/render/d3d11/DXRender.h
     src/Engine/core/render/opengl/GLRender.cpp
     src/Engine/core/render/opengl/GLRender.h
     src/Engine/core/render/vulkan/VKRender.cpp
     src/Engine/core/render/vulkan/VKRender.h
     src/Engine/graphics/Window.cpp
     src/Engine/graphics/Window.h
+    ${ENGINE_PLATFORM_SOURCES}
 )
 
-find_package(Vulkan)  # Optional - only needed if using VKRender
+find_package(Vulkan)
 add_library(Engine SHARED ${ENGINE_SOURCES})
 
-target_include_directories(Engine PUBLIC
-    src
-    external/GLFW/include
-    external/UUID/include
-    external/DDSTextureLoader
-    external
-)
+target_compile_definitions(Engine PRIVATE DEFORM_ENGINE_EXPORTS)
 
-if(Vulkan_FOUND)
-        target_include_directories(Engine PUBLIC ${Vulkan_INCLUDE_DIRS})
+if(WIN32)
+    target_include_directories(Engine PUBLIC
+        src
+        external/GLFW/include
+        external/UUID/include
+        external/DDSTextureLoader
+        external
+    )
+    target_link_libraries(Engine PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/external/GLFW/lib-vc2022/glfw3.lib"
+        d3d11.lib
+        dxgi.lib
+        d3dcompiler.lib
+        opengl32.lib
+    )
+else()
+    find_package(glfw3 REQUIRED)
+    find_package(OpenGL REQUIRED)
+
+    target_include_directories(Engine PUBLIC
+        src
+        external/UUID/include
+        external
+    )
+    target_link_libraries(Engine PRIVATE
+        glfw
+        OpenGL::GL
+        ${CMAKE_DL_LIBS}
+    )
 endif()
 
-target_link_libraries(Engine PRIVATE
-    "${CMAKE_CURRENT_SOURCE_DIR}/external/GLFW/lib-vc2022/glfw3.lib"
-    d3d11.lib
-    dxgi.lib
-    d3dcompiler.lib
-    opengl32.lib
-)
-
 if(Vulkan_FOUND)
-        target_link_libraries(Engine PRIVATE Vulkan::Vulkan)
+    target_include_directories(Engine PUBLIC ${Vulkan_INCLUDE_DIRS})
+    target_link_libraries(Engine PRIVATE Vulkan::Vulkan)
 endif()
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/Engine/$<CONFIG>/Runtime)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/Engine/$<CONFIG>/Library)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/Engine/$<CONFIG>/Archive)
-
-target_compile_definitions(Engine PRIVATE DEFORM_ENGINE_EXPORTS)

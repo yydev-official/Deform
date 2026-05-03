@@ -1,7 +1,15 @@
 #pragma once
 
-#ifdef SCRIPTING_EXPORTS
-    #define SCRIPTING_API __declspec(dllexport)
+#ifdef _WIN32
+    #ifdef SCRIPTING_EXPORTS
+        #define SCRIPTING_API __declspec(dllexport)
+    #else
+        #define SCRIPTING_API __declspec(dllimport)
+    #endif
 #else
-    #define SCRIPTING_API __declspec(dllimport)
+    #ifdef SCRIPTING_EXPORTS
+        #define SCRIPTING_API __attribute__((visibility("default")))
+    #else
+        #define SCRIPTING_API
+    #endif
 #endif

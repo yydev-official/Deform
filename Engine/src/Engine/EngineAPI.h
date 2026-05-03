@@ -1,10 +1,16 @@
 #pragma once
 
-// The DEFORM_API macro is defined to either export or import symbols from the Deform Engine DLL
-// depending on whether DEFORM_ENGINE_EXPORTS is defined.
-// This allows the engine to be used as a shared library in other projects.
-#ifdef DEFORM_ENGINE_EXPORTS
-	#define DEFORM_API __declspec(dllexport)
+#ifdef _WIN32
+    #ifdef DEFORM_ENGINE_EXPORTS
+        #define DEFORM_API __declspec(dllexport)
+    #else
+        #define DEFORM_API __declspec(dllimport)
+    #endif
 #else
-	#define DEFORM_API __declspec(dllimport)
+    // Linux/macOS — GCC visibility
+    #ifdef DEFORM_ENGINE_EXPORTS
+        #define DEFORM_API __attribute__((visibility("default")))
+    #else
+        #define DEFORM_API
+    #endif
 #endif
