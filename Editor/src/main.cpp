@@ -34,6 +34,7 @@
 // Engine headers
 #include "Engine.h"
 #include "Engine/graphics/Window.h"
+#include "RendererPicker.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -42,10 +43,10 @@
 
 class Application {
 public:
-    Application() : m_renderer(), m_initialized(false) {}
+    Application(WindowGraphicsAPI api) : m_api(api), m_renderer(), m_initialized(false) {}
 
     bool Initialize() {
-        bool CreatedWindow = CreateEditorWindow("Deform Editor", WINDOW_API);
+        bool CreatedWindow = CreateEditorWindow("Deform Editor", m_api);
         bool RendererInitialized = CreateRenderer();
         bool ImGuiInitialized = InitializeImGui();
 
@@ -276,14 +277,32 @@ private:
         return true;
     }
 
-    Window           m_window;
-    PlatformRenderer m_renderer;
-    Editor::UIState  m_state;
-    bool             m_initialized;
+    Window               m_window;
+    PlatformRenderer     m_renderer;
+    Editor::UIState      m_state;
+    WindowGraphicsAPI    m_api;
+    bool                 m_initialized;
 };
 
 int main() {
-    Application app;
+    // ── Show renderer picker before opening the editor ────────────
+    auto chosenAPI = RendererPicker::Show();
+    if (!chosenAPI.has_value())
+        return 0; // user closed the picker
+
+#ifdef _WIN32
+    // Remap Vulkan to OpenGL on Windows if Vulkan not yet implemented
+    WindowGraphicsAPI api = *chosenAPI;
+    if (api == WindowGraphicsAPI::VULKAN)
+        api = WindowGraphicsAPI::OpenGL; // TODO: VKRender
+#else
+    // On Linux, DX11 falls back to OpenGL
+    WindowGraphicsAPI api = (*chosenAPI == WindowGraphicsAPI::DX11)
+        ? WindowGraphicsAPI::OpenGL
+        : *chosenAPI;
+#endif
+
+    Application app(api);
     if (!app.Initialize()) return -1;
     int result = app.Run();
     app.Shutdown();

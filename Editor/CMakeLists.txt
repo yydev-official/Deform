@@ -13,6 +13,7 @@ set(IMGUI_COMMON_SOURCES
     "external/imgui/imgui_tables.cpp"
     "external/imgui/imgui_widgets.cpp"
     "external/imgui/backends/imgui_impl_glfw.cpp"
+    "external/imgui/backends/imgui_impl_opengl3.cpp"
 )
 
 if(WIN32)
